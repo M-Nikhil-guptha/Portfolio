@@ -527,6 +527,12 @@
 
     /* Media query for screens up to 768px wide */
     @media only screen and (max-width: 768px) {
+
+        .body {
+            font-family: Comic Sans MS, Comic Sans, cursive;
+
+        }
+
         .parallax-text {
             text-align: center;
             color: #ffffff;
