@@ -10,6 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf_viewer.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aileron&display=swap">
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF368NWBPW"></script>
@@ -25,17 +27,7 @@
 </head>
 
 <body>
-    <script src="script.js" defer></script>
-    <div class="parallax" id="parallax-section">
-        <div class="parallax-text">
-            <h1>Welcome to My Website</h1>
-            <p>Scroll down to explore</p>
-        </div>
-        <button id="scroll-down-btn" onclick="scrollToSection('about')">Scroll Down</button>
-    </div>
-
     <nav>
-        <a href="#" class="nav-button">HOME</a>
         <a href="#about" class="nav-button">ABOUT</a>
         <a href="#expertise" class="nav-button">EXPERTISE</a>
         <a href="#project" class="nav-button">PROJECTS</a>
@@ -43,6 +35,18 @@
         <a href="#experience" class="nav-button">EXPERIENCE</a>
         <a href="#contact" class="nav-button">CONTACT</a>
     </nav>
+
+    <script src="script.js" defer></script>
+    <div class="parallax">
+        <div class="parallax-text">
+            <h1>Welcome to My Website</h1>
+            <p>Scroll down to explore</p>
+        </div>
+        <button id="scroll-down-btn" onclick="scrollToSection('about')">Scroll Down</button>
+    </div>
+
+    <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
+
     <div class="content" id="about">
         <div class="photo">
             <img src="Photo.png" alt="My photo">
@@ -155,7 +159,7 @@
         </div>
     </div>
 
-    <div class="my-project" id="project">
+    < <div class="my-project" id="project">
         <h1>MY PROJECTS</h1>
         <div class="project-list">
             <div class="project">
@@ -198,8 +202,7 @@
 
         </div>
     </div>
-
-
+    
 
     <div class="Certificate" id="certificate">
         <h1>CERTIFICATES</h1>
@@ -254,11 +257,16 @@
     <div class="Contact" id="contact">
         <h1>CONTACT DETAILS</h1>
         <div class="contact-container">
-            <div class="resume">
-                <div id="pdfViewer"></div>
-                <a href="Deepak's Resume.pdf" download="Deepak's Resume.pdf" class="download-button">Download Resume</a>
+            <h1>DOWNLOAD THE RESUME </h1>
+            <div class="container">
+                <label>
+                    <input class="check" type="checkbox">
+                    <div class="btn">
+                        <span class="me">download</span>
+                        <span class="mo">Hang on a moment, download in progress</span>
+                    </div>
+                </label>
             </div>
-
 
             <div class="social-media">
                 <div class="main">
