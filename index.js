@@ -33,31 +33,7 @@ function topFunction() {
     });
 }
 
-document.addEventListener('scroll', function () {
-    var currentScroll = window.pageYOffset;
-    var aboutSection = document.getElementById('about');
-    var expertiseSection = document.getElementById('expertise');
-    var projectSection = document.getElementById('project');
-    var certificateSection = document.getElementById('certificate');
-    var experienceSection = document.getElementById('experience');
-    var contactSection = document.getElementById('contact');
 
-    var navLinks = document.querySelectorAll('nav a');
-
-    if (isElementInViewport(aboutSection)) {
-        setActive(navLinks, 0);
-    } else if (isElementInViewport(expertiseSection)) {
-        setActive(navLinks, 1);
-    } else if (isElementInViewport(projectSection)) {
-        setActive(navLinks, 2);
-    } else if (isElementInViewport(certificateSection)) {
-        setActive(navLinks, 3);
-    } else if (isElementInViewport(experienceSection)) {
-        setActive(navLinks, 4);
-    } else if (isElementInViewport(contactSection)) {
-        setActive(navLinks, 5);
-    }
-});
 
 function isElementInViewport(element) {
     var rect = element.getBoundingClientRect();
@@ -115,39 +91,6 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
-
-// Function to animate text
-function animateText(stepIndex, elementId) {
-    const steps = [
-        "Ensuring dataset quality and reliability with techniques like handling missing values and standardizing formats.",
-        "Uncovering patterns and relationships using visualizations like histograms and scatter plots.",
-        "Extracting meaningful insights and improving model performance through techniques like feature scaling and dimensionality reduction.",
-        "Predicting outcomes using algorithms such as linear regression and decision trees.",
-        "Assessing model performance with metrics like accuracy and enhancing predictive capabilities through techniques like cross-validation."
-    ];
-
-    const text = steps[stepIndex];
-    let currentText = "";
-    let currentIndex = 0;
-
-    function animate() {
-        if (currentIndex < text.length) {
-            currentText += text[currentIndex];
-            document.getElementById(elementId).textContent = currentText;
-            currentIndex++;
-            requestAnimationFrame(animate);
-        } else {
-            if (stepIndex < steps.length - 1) {
-                setTimeout(function () {
-                    animateText(stepIndex + 1, `step${stepIndex + 2}`);
-                }, 30); // Adjust delay as needed
-            }
-        }
-    }
-
-    animate();
-}
-
 
 // Function to handle scroll event
 function handleScroll() {
